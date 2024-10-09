@@ -35,8 +35,10 @@ public:
    *
    * @param {uint8_t} i2caddr - Sets the slave address of the PCA9534,
    * defaults to 0x20.
+   * @param {uint8_t} sda - Sets the SDA pin of the PCA9534 chip.
+   * @param {uint8_t} scl - Sets the SCL pin of the PCA9534 chip.
    */
-  void begin(uint8_t i2caddr = PCA9534_I2C_ADDRESS);
+  void begin(uint8_t i2caddr = PCA9534_I2C_ADDRESS, uint8_t sda, uint8_t scl);
 
   /**
    * Configures the specified pin to behave either as an input, inverted input,

@@ -7,9 +7,9 @@ PCA9534::PCA9534() {
   _invport = 0;
 }
 
-void PCA9534::begin(uint8_t i2caddr) {
+void PCA9534::begin(uint8_t i2caddr, uint8_t sda, uint8_t scl) {
   _i2caddr = i2caddr;
-  Wire.begin();
+  Wire.begin(sda, scl);
 }
 
 void PCA9534::pinMode(uint8_t pin, uint8_t mode) {
