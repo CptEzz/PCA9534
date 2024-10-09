@@ -20,6 +20,8 @@
 #define PCA9534_CONF_REGISTER   0x03
 #define INPUT_INVERTED          0x04
 
+#define SCL_PIN (uint8_t)17
+#define SDA_PIN (uint8_t)18
 
 class PCA9534 {
 public:
@@ -38,7 +40,7 @@ public:
    * @param {uint8_t} sda - Sets the SDA pin of the PCA9534 chip.
    * @param {uint8_t} scl - Sets the SCL pin of the PCA9534 chip.
    */
-  void begin(uint8_t i2caddr = PCA9534_I2C_ADDRESS, uint8_t sda, uint8_t scl);
+  void begin(uint8_t i2caddr = PCA9534_I2C_ADDRESS, uint8_t sda = SDA_PIN, uint8_t scl = SCL_PIN);
 
   /**
    * Configures the specified pin to behave either as an input, inverted input,
